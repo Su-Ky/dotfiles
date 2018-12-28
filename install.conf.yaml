@@ -1,0 +1,45 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+        force: true
+
+- clean: ['~', '~/.config']
+
+- link:
+    ~/.asoundrc: .asoundrc
+    ~/.profile: .profile
+    ~/.vimrc: .vimrc
+    ~/.config/X11: .config/X11
+    ~/.config/alsi: .config/alsi
+    ~/.config/bpython: .config/bpython
+    ~/.config/colours: .config/colours
+    ~/.config/compton.conf: .config/compton.conf
+    ~/.config/dircolors: .config/dircolors
+    ~/.config/dunst/dunstrc: .config/dunst/dunstrc
+    ~/.config/fontconfig/fonts.conf: .config/fontconfig/fonts.conf
+    ~/.config/htop/htoprc: .config/htop/htoprc
+    ~/.config/irssi/scripts: .config/irssi/scripts
+    ~/.config/irssi/themes: .config/irssi/themes
+    ~/.config/mpv/config: .config/mpv/config
+    ~/.config/msmtprc: .config/msmtprc
+    ~/.config/mutt: .config/mutt
+    ~/.config/ncmpcpp: .config/ncmpcpp
+    ~/.config/newsbeuter: .config/newsbeuter
+    ~/.config/notmuch/notmuchrc: .config/notmuch/notmuchrc
+    ~/.config/npmrc: .config/npmrc
+    ~/.config/offlineimap/config: .config/offlineimap/config
+    ~/.config/offlineimap/offlineimap.py: .config/offlineimap/offlineimap.py
+    ~/.config/readline/inputrc: .config/readline/inputrc
+    ~/.config/surf: .config/surf
+    ~/.config/systemd: .config/systemd
+    ~/.config/transmission-remote-cli/settings.cfg: .config/transmission-remote-cli/settings.cfg
+    ~/.config/vifm/colors: .config/vifm/colors
+    ~/.config/vifm/scripts: .config/vifm/scripts
+    ~/.config/vifm/vifmrc: .config/vifm/vifmrc
+    ~/.config/zsh/.zprofile: .config/zsh/.zprofile
+    ~/.config/zsh/.zshenv: .config/zsh/.zshenv
+    ~/.config/zsh/.zshrc: .config/zsh/.zshrc
+    ~/.config/zsh/aliases.zsh: .config/zsh/aliases.zsh
+    ~/.config/zsh/functions.zsh: .config/zsh/functions.zsh
+

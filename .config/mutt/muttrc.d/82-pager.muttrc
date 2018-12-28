@@ -1,0 +1,13 @@
+# $XDG_CONFIG_HOME/mutt/muttrc.d/82-pager.muttrc
+# vim:set ft=sh
+set pager_index_lines   = 10                                     # number of index lines to show 
+set pager_context       = 5                                      # number of context lines to show
+set pager_stop                                                   # dont go to next message automatically
+set menu_scroll                                                  # scroll in menus 
+set smart_wrap                                                   # dont split words
+set tilde                                                        # show tildes like in vim
+unset markers                                                    # no ugly plus signs
+auto_view text/html                                              # view html automatically
+alternative_order text/plain text/enriched text/html             # save html for last
+set quote_regexp        = "^( {0,4}[>|:#%]| {0,4}[a-z0-9]+[>|]+)+"
+set status_on_top                                                # as youd expect

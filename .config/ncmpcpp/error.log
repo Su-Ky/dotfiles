@@ -1,0 +1,15 @@
+[2014/07/14 17:39:51] empty SongList passed to FindSharedDir(const SongList &)!
+writeCommonTags: couldn't write 'year' tag to 'El ultimo ke zierre/11- La Burbuja/01 La burbuja.wma' as it's not a positive integer
+writeCommonTags: couldn't write 'year' tag to 'El ultimo ke zierre/11- La Burbuja/02 Refuckeado.wma' as it's not a positive integer
+writeCommonTags: couldn't write 'year' tag to 'El ultimo ke zierre/11- La Burbuja/03 Pidele al cielo.wma' as it's not a positive integer
+writeCommonTags: couldn't write 'year' tag to 'El ultimo ke zierre/11- La Burbuja/04 Lo que te llevas.wma' as it's not a positive integer
+writeCommonTags: couldn't write 'year' tag to 'El ultimo ke zierre/11- La Burbuja/05 El juego de los alguien.wma' as it's not a positive integer
+writeCommonTags: couldn't write 'year' tag to 'El ultimo ke zierre/11- La Burbuja/06 No es amor (adios castigo).wma' as it's not a positive integer
+writeCommonTags: couldn't write 'year' tag to 'El ultimo ke zierre/11- La Burbuja/07 Un poco mas.wma' as it's not a positive integer
+writeCommonTags: couldn't write 'year' tag to 'El ultimo ke zierre/11- La Burbuja/08 El bar del belga.wma' as it's not a positive integer
+writeCommonTags: couldn't write 'year' tag to 'El ultimo ke zierre/11- La Burbuja/09 Somos violencia.wma' as it's not a positive integer
+writeCommonTags: couldn't write 'year' tag to 'El ultimo ke zierre/11- La Burbuja/10 No es pecado.wma' as it's not a positive integer
+writeCommonTags: couldn't write 'year' tag to 'El ultimo ke zierre/11- La Burbuja/11 La envidia.wma' as it's not a positive integer
+writeCommonTags: couldn't write 'year' tag to 'El ultimo ke zierre/11- La Burbuja/12 La mala energia.wma' as it's not a positive integer
+writeCommonTags: couldn't write 'year' tag to 'El ultimo ke zierre/11- La Burbuja/13 Vuelvo a santiago.wma' as it's not a positive integer
+regexSearch: bad_expression: The repeat operator "?" cannot start a regular expression.  The error occurred while parsing the regular expression: '>>>HERE>>>?<'.

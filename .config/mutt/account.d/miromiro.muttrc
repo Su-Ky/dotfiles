@@ -1,0 +1,15 @@
+############################
+# miromiro specific options
+############################
+
+color status    brightwhite cyan
+color indicator brightwhite cyan
+
+set from      = "jason@miromiro.com"
+set sendmail  = "/usr/bin/msmtp -a Miromiro"
+set mbox      = "+Miromiro/archive"
+set record    = "+Miromiro/INBOX.Sent"
+set postponed = "+Miromiro/INBOX.Drafts"
+
+macro index S "<save-message>+Miromiro/INBOX.Spam<enter>"  "mark message as spam"
+

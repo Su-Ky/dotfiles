@@ -1,0 +1,59 @@
+[general]
+metadata = ~/.config/offlineimap 
+maxsyncaccounts = 2
+pythonfile = ~/.config/offlineimap/offlineimap.py
+socktimeout = 60
+ignore-readonly = no
+accounts = personal
+createfolders = True
+fsync = true
+
+# The pre-defined options are:
+# Blinkenlights -- A fancy (terminal) interface
+# TTYUI         -- a text-based (terminal) interface
+# Basic         -- Noninteractive interface suitable for cron'ing
+# Quiet         -- Noninteractive interface, generates no output
+#                  except for errors.
+# MachineUI     -- Interactive interface suitable for machine
+#                  parsing.
+ui = TTYUI 
+
+[mbnames]
+enabled = yes
+filename = ~/.config/mutt/muttrc.d/99-mailboxes.muttrc
+header = "mailboxes "
+peritem = "+%(accountname)s/%(foldername)s"
+sep = " "
+footer = "\n"
+incremental = no
+sort_keyfunc = lambda d: (d['accountname'], d['foldername'])
+
+[Account personal]
+remoterepository = personal_r
+localrepository  = personal_l
+status_backend = sqlite
+postsynchook = notmuch new
+
+[Repository personal_r]
+type = Gmail
+remoteuser = example@gmail.com
+remotepasseval = get_pass("personal")
+ssl = yes
+sslcacertfile = /etc/ssl/certs/ca-certificates.crt
+folderfilter = lambda folder: folder in ('INBOX', 'Sent', 'Queue', 
+        '[Gmail].All Mail', '[Gmail].Drafts', '[Gmail].Sent Mail')
+expunge = yes
+subscribedonly = no
+auth_mechanisms = LOGIN
+
+[Repository personal_l]
+type = GmailMaildir
+maxdate = 1460
+localfolders = ~/Documents/mail/personal
+nametrans = lambda folder: {
+	'Sent'		: '[Gmail].Sent Mail',
+	'Archive'	: '[Gmail].All Mail',
+        'Drafts'        : '[Gmail].Drafts'
+        }.get(folder,folder)
+folderfilter = lambda folder: folder in ['[Gmail].Drafts', '[Gmail].SentMail', '[Gmail]/Trash', '[Gmail]/All Mail', 'INBOX']
+

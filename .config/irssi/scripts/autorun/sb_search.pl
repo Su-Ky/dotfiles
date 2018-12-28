@@ -1,0 +1,1 @@
+/usr/share/irssi/scripts/sb_search.pl

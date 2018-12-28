@@ -1,0 +1,23 @@
+# file:     $XDG_CONFIG_HOME/X11/xprofile
+# vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh:
+
+source "$HOME"/.profile
+
+# TTYtter hack
+#export PERL_SIGNALS=unsafe
+export BROWSER="/usr/bin/chromium"
+export FLAG="chromium"
+
+## start keychain
+#/usr/bin/keychain -Q -q --nogui id_dsa id_rsa alioth archer bb B1BD4E40
+#[[ -f $HOME/.keychain/${HOSTNAME}-sh ]] && source $HOME/.keychain/${HOSTNAME}-sh
+#[[ -f $HOME/.keychain/${HOSTNAME}-sh-gpg ]] && source $HOME/.keychain/${HOSTNAME}-sh-gpg
+#
+## startx if on TTY1 and tmux on TTY2
+#if [[ -z "$DISPLAY" ]] && [[ $(tty) = /dev/tty1 ]]; then
+#    exec startx -- vt1 &>/dev/null
+#    logout
+#  elif [[ $(tty) = /dev/tty2 ]]; then
+#    tmux -f $HOME/.tmux/conf new -s secured
+#fi
+#

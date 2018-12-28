@@ -1,0 +1,9 @@
+message/rfc822; less %s; edit=${EDITOR-vi} %s; compose=${EDITOR-vi} %s; needsterminal;
+text/html; elinks -dump ; copiousoutput;
+image/*; sxiv %s
+video/*; mpv %s
+audio/*; mpv %s
+text/*; vim %s
+application/pdf; acroread %s
+application/msword; libreoffice %s
+application/docx; libreoffice %s

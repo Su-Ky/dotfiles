@@ -1,0 +1,19 @@
+# FileName: $XDG_CONFIG_HOME/mutt/muttrc.d/00-main.muttrc
+# vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=muttrc
+set mbox_type           = Maildir                                
+set folder              = ~/Documents/mail                                 
+set spoolfile           = +/work/INBOX
+set timeout             = 3                                      
+set mail_check          = 0                                      
+set sort_alias          =  address
+set reverse_alias                                                
+unset move                                                       
+set delete                                                       
+unset confirmappend                                              
+set quit                                                         
+unset mark_old                                                   
+set beep_new                                                     
+set pipe_decode                                                  
+set thorough_search                                              
+unset help
+unset use_ipv6

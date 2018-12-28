@@ -1,0 +1,27 @@
+# FileName:     $XDG_CONFIG_HOME/mutt/muttrc                         
+# vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh
+
+# directories and commands
+set alias_file          = $XDG_CONFIG_HOME/mutt/alias                          
+set header_cache        = $XDG_CACHE_HOME/mutt/headers                  
+set message_cachedir    = $XDG_CACHE_HOME/mutt/bodies                   
+set certificate_file    = $XDG_CONFIG_HOME/mutt/certificates                   
+set mailcap_path        = $XDG_CONFIG_HOME/mutt/mailcap                        
+set signature           = $XDG_CONFIG_HOME/mutt/sig                            
+set tmpdir              = $XDG_CACHE_HOME/mutt
+set editor              = "/usr/bin/vim -c 'set tw=79:ft=mail:spell:spelllang=en:wrap:nocp' -c '+/^--.$/-1'"
+set ispell              = "/usr/bin/aspell -e -c"                
+set print_command       = "$XDG_CONFIG_HOME/mutt/bin/muttrcprint"
+set query_command       = "abook --datafile $XDG_DATA_HOME/mutt/abook --mutt-query '%s'"
+set imap_peek           = yes                
+
+# always sourced
+source $alias_file
+
+# Input inspired in init.d
+source '$XDG_CONFIG_HOME/mutt/bin/conf.d.sh muttrc|'
+source '$XDG_CONFIG_HOME/mutt/bin/conf.d.sh account|'
+
+# Search account specific sources in
+# $XDG_CONFIG_HOME/mutt/account.d/[0-9]{2}-[[:alpha:]]+\.muttrc
+source '$XDG_CONFIG_HOME/mutt/bin/folder-hook.sh|'

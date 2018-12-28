@@ -1,0 +1,65 @@
+# FileName: $XDG_CONFIG_HOME/X11/xinitrc
+# vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh:
+
+PROFILE="~/.config/X11/xprofile"
+XRESOURCES="~/.config/X11/xresources"
+
+if [[ ` xrandr | awk '/ connected / {print $1}' | wc -l` -eq 2 ]]; then
+    /usr/bin/xrandr --output eDP1 --mode 1920x1080 --right-of HDMI1 --output HDMI1 --mode 1920x1080
+fi
+
+if [[ -d /etc/X11/xinit/xinitrc.d ]]; then
+    for f in /etc/X11/xinit/xinitrc.d/*; do
+        [ -x "$f" ] && . "$f" 
+    done
+    unset f
+fi
+
+# Profile
+[ -r $PROFILE ] && source $PROFILE
+unset PROFILE
+
+# load .Xresources
+[ -r $XRESOURCES ] && /usr/bin/xrdb -merge $XRESOURCES
+unset XRESOURCES
+
+# composite
+compton  --focus-exclude "x = 0 && y = 0 && override_redirect = true" --backend xrender --vsync none &
+
+# set wallpaper
+[ -r ~/.fehbg ] && /usr/bin/sh ~/.fehbg
+
+# enable restart X
+/usr/bin/setxkbmap -option terminate:ctrl_alt_bksp 
+
+# Remap CapsLock to Escape
+/usr/bin/setxkbmap -option caps:swapescape 
+
+# compose key
+/usr/bin/setxkbmap -option compose:ralt 
+
+# set cursor
+# /usr/bin/xsetroot -cursor_name left_ptr 
+
+# hide cursor
+/usr/bin/unclutter -noevents -idle 2 &
+
+# clipboard synching
+/usr/bin/autocutsel -fork 
+/usr/bin/autocutsel -selection CLIPBOARD -fork 
+
+# disable touchpad
+/usr/bin/synclient TouchpadOff=1 
+
+# Screensaver
+/usr/bin/xset +dmps on
+/usr/bin/xset s 300 300
+
+# Fixing misbehaving Java applications
+/usr/bin/wmname LG3D &
+
+# statusbar
+[ -z "$(pgrep tdwmstatus)" ] && /usr/local/bin/tdwmstatus &	
+
+# WM
+exec dwm

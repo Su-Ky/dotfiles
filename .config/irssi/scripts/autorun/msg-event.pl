@@ -1,0 +1,1 @@
+/usr/share/irssi/scripts/msg-event.pl

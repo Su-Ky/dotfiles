@@ -1,0 +1,16 @@
+#########################
+# gmail specific options
+#########################
+
+color status     brightwhite   green
+color indicator  brightwhite   green
+
+set from      = "example@gmail.com"
+set sendmail  = "/usr/bin/msmtp -a work"
+set mbox      = "+work/INBOX"
+set record    = "+work/Sent"
+set postponed = "+work/Queue"
+
+macro index E "<change-folder>+work/INBOX<enter><limit>~B "   "search everything"
+macro index D "<save-message>+work/Trash<enter>"                "move message to the trash"
+

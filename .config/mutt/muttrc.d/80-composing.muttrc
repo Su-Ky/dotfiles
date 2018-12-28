@@ -1,0 +1,21 @@
+# FileName: $XDG_CONFIG_HOME/mutt/muttrc.d/**-composing.muttrc
+# vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=muttrc
+set realname            = "My name"                              # who am i?
+set envelope_from                                                # which from?
+set sig_dashes                                                   # dashes before my sig... sweet
+set edit_headers                                                 # show headers when composing
+set fast_reply                                                   # skip to compose when replying
+set sendmail_wait       = -1                                     # dont wait for sending... to complete
+set askcc                                                        # ask for CC:
+set fcc_attach                                                   # save attachments with the body
+set mime_forward                                                 # forward attachments as part of body
+set mime_forward_rest                                            # include attachments
+set forward_format      = "Fwd: %s"                              # format for subject when forwarding
+set forward_decode                                               # decode when forwarding
+set attribution         = "On %d, %n wrote:"                     # set the attribution
+set reply_to                                                     # reply to Reply to: field
+set reverse_name                                                 # reply as whomever it was to
+set include                                                      # include message in replies
+set forward_quote                                                # include message in forwards
+set print_command      = "muttprint"                             # printer…
+

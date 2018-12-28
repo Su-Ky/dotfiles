@@ -1,0 +1,7 @@
+# FileName: $XDG_CONFIG_HOME/mutt/muttrc.d/**-headers.muttrc
+# vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=muttrc
+
+ignore *                                                         # ignore all headers
+unignore from: to: cc: date: subject:                            # show only these
+hdr_order from: to: cc: date: subject:                           # and in this order
+

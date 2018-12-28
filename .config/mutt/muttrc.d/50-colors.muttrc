@@ -1,0 +1,5 @@
+# file:     $XDG_CONFIG_HOME/mutt/muttrc/50-colors.muttrc
+# vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=sh
+
+source "$XDG_CONFIG_HOME/mutt/muttrc.d/_colors.muttrc"
+source "$XDG_CONFIG_HOME/mutt/bin/colors.sh|"

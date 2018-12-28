@@ -1,0 +1,13 @@
+# FileName: $XDG_CONFIG_HOME/mutt/muttrc.d/maillist.muttrc
+# vim:fenc=utf-8:nu:ai:si:et:ts=4:sw=4:ft=muttrc
+
+# Mailing lists
+# Archlinux
+lists -group archlinux [a-z]+-?[a-z]@archlinux.org 
+subscribe -group archlinux [a-z]+-?[a-z]@archlinux.org 
+
+# Suckless
+lists -group suckless [a-z]-?[a-z]@suckless.org
+subscribe -group suckless [a-z]-?[a-z]@suckless.org
+
+

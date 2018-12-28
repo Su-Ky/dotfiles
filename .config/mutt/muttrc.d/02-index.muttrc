@@ -1,0 +1,7 @@
+# $XDG_CONFIG_HOME/mutt/muttrc.d/02-index.muttrc
+# vim:set ft=sh
+set sort                = threads                                # like gmail 
+set sort_aux            = reverse-last-date-received             # like gmail
+set uncollapse_jump                                              # dont collapse on an unread message 
+set sort_re                                                      # thread based on regex
+set reply_regexp        = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"

@@ -1,0 +1,6 @@
+defaults.pcm.device 0
+defaults.ctl.card 0 
+defaults.pcm.card 0
+
+ctl.mixer0.type hw
+ctl.mixer0.card 0
