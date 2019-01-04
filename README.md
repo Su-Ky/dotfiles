@@ -3,7 +3,7 @@
 
 ```
 # printf "ZDOTDIR=~/.config/zsh\n" >> /etc/zsh/zshenv
-$ git clone https://github.com/botika/dotfiles
+$ git clone https://github.com/Su-Ky/dotfiles
 $ cd dotfiles
 $ ./install
 ```
